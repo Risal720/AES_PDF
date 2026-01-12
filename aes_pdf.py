@@ -6,7 +6,7 @@ from Crypto.Protocol.KDF import scrypt
 
 # --- Fungsi Inti Kriptografi ---
 def generate_key(password, salt):
-    return scrypt(password, salt, key_len=32, n=2**14, r=8, p=1)
+    return scrypt(password, salt, key_len=32, N=2**14, r=8, p=1)
 
 def encrypt_data(data, password):
     salt = os.urandom(16)
@@ -31,8 +31,8 @@ def decrypt_data(combined_data, password):
 # --- Tampilan Web Streamlit ---
 st.set_page_config(page_title="AES PDF Encryptor", page_icon="🔐")
 
-st.title("🔐 Simulasi Enkripsi & Dekripsi AES-256")
-st.write("Tugas UAS Kriptografi - Enkripsi File PDF sebagai Binary Data.")
+st.title("Enkripsi & Dekripsi AES-256")
+st.write("UAS Kriptografi - Enkripsi File PDF sebagai Binary Data.")
 
 tab1, tab2 = st.tabs(["Enkripsi", "Dekripsi"])
 
