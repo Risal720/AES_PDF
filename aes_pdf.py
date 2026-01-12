@@ -29,7 +29,7 @@ def decrypt_data(combined_data, password):
         return None
 
 # --- Tampilan Web Streamlit ---
-st.set_page_config(page_title="AES PDF Encryptor", page_icon="🔐")
+st.set_page_config(page_title="AES PDF Encryptor")
 
 st.title("Enkripsi & Dekripsi AES-256")
 st.write("UAS Kriptografi - Enkripsi File PDF sebagai Binary Data.")
